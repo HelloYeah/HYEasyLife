@@ -20,13 +20,28 @@ class HYHomeTableViewCell: UITableViewCell {
             
             self.tileLabel.frame.size = size
             
-            let url = NSURL(string: (model?.thumbnail_pic_s)!)
-            if let imageData = try? NSData.init(contentsOf: url! as URL, options:NSData.ReadingOptions.mappedRead){
-                self.picView.image = UIImage.init(data:imageData as Data)
-                self.picView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 200 - self.tileLabel.frame.height)
-                self.picView.frame.origin = CGPoint(x: 0, y:self.tileLabel.frame.height)
-            }
+            let url = URL(string: (model?.thumbnail_pic_s)!)
         
+            //创建请求对象
+            let request = URLRequest(url: url!)
+            
+            let session = URLSession.shared
+            let dataTask = session.dataTask(with: request, completionHandler: {
+                (data, response, error) -> Void in
+                if error != nil{
+                    print(error.debugDescription)
+                }else{
+                    //将图片数据赋予UIImage
+                    let img = UIImage(data:data!)
+                    self.picView.image = img
+                    self.picView.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 200 - self.tileLabel.frame.height)
+                    self.picView.frame.origin = CGPoint(x: 0, y:self.tileLabel.frame.height)
+                }
+            }) as URLSessionTask
+            
+            //使用resume方法启动任务
+            dataTask.resume()
+
         }
     }
     
