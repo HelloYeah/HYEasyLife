@@ -13,12 +13,14 @@ class HYHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     var count = 10
     
+    var dataArray : [HYNewsModel]?
+    
     lazy var tableView : UITableView = {
     
         let tableView = UITableView.init(frame: self.view.bounds)
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "HomeTableViewCell")
+        tableView.register(HYHomeTableViewCell.self, forCellReuseIdentifier: "HYHomeTableViewCell")
         return tableView
         
     }()
@@ -42,19 +44,40 @@ class HYHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.view.addSubview(self.tableView)
         tableView.refreshControl = self.refreshControl
         tableView.refreshControl?.addTarget(self, action: #selector(HYHomeViewController.refreshData), for: .valueChanged)
+        self.refreshData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return count;
+        
+        let count = self.dataArray?.count
+        if count != nil {
+            return count!;
+        }
+        return 0;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeTableViewCell", for: indexPath)
-        cell.textLabel?.text = "\(indexPath.section)+\(indexPath.row)"
+//        NSArray
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HYHomeTableViewCell", for: indexPath) as! HYHomeTableViewCell
+        let model = self.dataArray![indexPath.row]
+        cell.model = model
         return cell
     }
     
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200.0
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        let newDetail = HYNewDetailViewController()
+        let model = self.dataArray![indexPath.row]
+        newDetail.url = model.url
+        self.navigationController?.pushViewController(newDetail, animated: true)
+    }
     
     func refreshData()  {
         
@@ -74,10 +97,12 @@ class HYHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
             do {
                 let dictData = try JSONSerialization.jsonObject(with: data!, options:.mutableLeaves)
                 
-                let dict = NSDictionary(data: dictData, encoding: )
-//                params["list"] = dict
-//                let result =
-//                print(result)
+                let dict = dictData as! NSDictionary
+                let resultDict = dict["result"] as! NSDictionary
+                let list = resultDict["data"] as! [[String:AnyObject]]
+                self.dataArray = HYNewsModel.dictToModel(list: list)
+                self.tableView.reloadData()
+                print(dict)
             } catch {   // 如果反序列化失败，能够捕获到 json 失败的准确原因，而不会崩溃
                 print(error)
             }
@@ -85,5 +110,6 @@ class HYHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         task.resume()
     }
-    
 }
+
+

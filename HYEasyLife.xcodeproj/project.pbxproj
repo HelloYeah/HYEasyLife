@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B48DC17A1E7932FC00DD81F6 /* HYHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48DC1791E7932FC00DD81F6 /* HYHomeTableViewCell.swift */; };
+		B48DC17C1E79439900DD81F6 /* HYNewDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48DC17B1E79439900DD81F6 /* HYNewDetailViewController.swift */; };
 		B498F5A21E77E62C003EBD9A /* HYNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B498F5A11E77E62C003EBD9A /* HYNewsModel.swift */; };
 		B4A6B2241E727279008E6965 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A6B2231E727279008E6965 /* AppDelegate.swift */; };
 		B4A6B22B1E727279008E6965 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4A6B22A1E727279008E6965 /* Assets.xcassets */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B48DC1791E7932FC00DD81F6 /* HYHomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYHomeTableViewCell.swift; sourceTree = "<group>"; };
+		B48DC17B1E79439900DD81F6 /* HYNewDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYNewDetailViewController.swift; sourceTree = "<group>"; };
 		B498F5A11E77E62C003EBD9A /* HYNewsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYNewsModel.swift; sourceTree = "<group>"; };
 		B4A6B2201E727279008E6965 /* HYEasyLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HYEasyLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4A6B2231E727279008E6965 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -164,7 +168,9 @@
 			isa = PBXGroup;
 			children = (
 				B4A6B2581E7275A6008E6965 /* HYHomeViewController.swift */,
+				B48DC1791E7932FC00DD81F6 /* HYHomeTableViewCell.swift */,
 				B498F5A11E77E62C003EBD9A /* HYNewsModel.swift */,
+				B48DC17B1E79439900DD81F6 /* HYNewDetailViewController.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -323,9 +329,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4A6B25C1E72789B008E6965 /* HYUserViewController.swift in Sources */,
+				B48DC17A1E7932FC00DD81F6 /* HYHomeTableViewCell.swift in Sources */,
 				B498F5A21E77E62C003EBD9A /* HYNewsModel.swift in Sources */,
 				B4A6B2521E727325008E6965 /* HYTabBarController.swift in Sources */,
 				B4A6B2561E727567008E6965 /* HYNavigationController.swift in Sources */,
+				B48DC17C1E79439900DD81F6 /* HYNewDetailViewController.swift in Sources */,
 				B4A6B2591E7275A6008E6965 /* HYHomeViewController.swift in Sources */,
 				B4A6B25F1E7290DC008E6965 /* HYServerApi.swift in Sources */,
 				B4A6B2241E727279008E6965 /* AppDelegate.swift in Sources */,

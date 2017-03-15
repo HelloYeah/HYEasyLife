@@ -18,14 +18,37 @@ import Foundation
 //url = "http://mini.eastday.com/mobile/170314104517749.html";
 class HYNewsModel: NSObject {
     
-    var author_name : NSString?
-    var category : NSString?
-    var date : NSString?
-    var thumbnail_pic_s : NSString?
-    var thumbnail_pic_s01 : NSString?
-    var thumbnail_pic_s02 : NSString?
-    var title : NSString?
-    var uniquekey : NSString?
-    var url : NSString?
+    var author_name : String?
+    var category : String?
+    var date : String?
+    var thumbnail_pic_s : String?
+    var thumbnail_pic_s01 : String?
+    var thumbnail_pic_s02 : String?
+    var title : String?
+    var uniquekey : String?
+    var url : String?
     
+    
+    init(dict:[String:AnyObject]) {
+        super.init()
+        setValuesForKeys(dict)
+    }
+    
+    
+    
+    class func dictToModel(list:[[String:AnyObject]]) -> [HYNewsModel] {
+        var models = [HYNewsModel]()
+        for dict in list {
+            models.append(HYNewsModel(dict: dict))
+        }
+        return models
+    }
+    
+    override func setValue(_ value: Any?, forKey key: String) {
+        super.setValue(value, forKey: key)
+    }
+    
+    override func setValue(_ value: Any?, forUndefinedKey key: String) {
+        
+    }
 }
