@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B498F5A21E77E62C003EBD9A /* HYNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B498F5A11E77E62C003EBD9A /* HYNewsModel.swift */; };
 		B4A6B2241E727279008E6965 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A6B2231E727279008E6965 /* AppDelegate.swift */; };
 		B4A6B22B1E727279008E6965 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4A6B22A1E727279008E6965 /* Assets.xcassets */; };
 		B4A6B22E1E727279008E6965 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4A6B22C1E727279008E6965 /* LaunchScreen.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B498F5A11E77E62C003EBD9A /* HYNewsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYNewsModel.swift; sourceTree = "<group>"; };
 		B4A6B2201E727279008E6965 /* HYEasyLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HYEasyLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4A6B2231E727279008E6965 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4A6B22A1E727279008E6965 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,6 +82,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B498F5A01E77BEDC003EBD9A /* Thirdparty */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Thirdparty;
+			sourceTree = "<group>";
+		};
 		B4A6B2171E727279008E6965 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +112,7 @@
 		B4A6B2221E727279008E6965 /* HYEasyLife */ = {
 			isa = PBXGroup;
 			children = (
+				B498F5A01E77BEDC003EBD9A /* Thirdparty */,
 				B4A6B25D1E729076008E6965 /* Config */,
 				B4A6B25A1E727835008E6965 /* User */,
 				B4A6B2571E727583008E6965 /* Home */,
@@ -154,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				B4A6B2581E7275A6008E6965 /* HYHomeViewController.swift */,
+				B498F5A11E77E62C003EBD9A /* HYNewsModel.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -312,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4A6B25C1E72789B008E6965 /* HYUserViewController.swift in Sources */,
+				B498F5A21E77E62C003EBD9A /* HYNewsModel.swift in Sources */,
 				B4A6B2521E727325008E6965 /* HYTabBarController.swift in Sources */,
 				B4A6B2561E727567008E6965 /* HYNavigationController.swift in Sources */,
 				B4A6B2591E7275A6008E6965 /* HYHomeViewController.swift in Sources */,
@@ -559,6 +571,7 @@
 				B4A6B24A1E72727A008E6965 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B4A6B24B1E72727A008E6965 /* Build configuration list for PBXNativeTarget "HYEasyLifeTests" */ = {
 			isa = XCConfigurationList;
@@ -567,6 +580,7 @@
 				B4A6B24D1E72727A008E6965 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B4A6B24E1E72727A008E6965 /* Build configuration list for PBXNativeTarget "HYEasyLifeUITests" */ = {
 			isa = XCConfigurationList;
@@ -575,6 +589,7 @@
 				B4A6B2501E72727A008E6965 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

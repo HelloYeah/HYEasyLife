@@ -61,15 +61,23 @@ class HYHomeViewController: UIViewController, UITableViewDelegate, UITableViewDa
         self.count += 10
         self.tableView.reloadData()
         self.refreshControl.endRefreshing()
-        
-        let url = HYNewsApi + "?queryType=2&imgFlage=3&selectFlag=0"
-        let request = URLRequest.init(url: URL.init(string: url)!)
+        let path = "/toutiao/index"
+        let method = "GET"
+        let querys = "?type=type"
+        let url = HYNewsApi + path + querys
+        var request = URLRequest.init(url: URL.init(string: url)!)
+        request.httpMethod = method
+        request.addValue("APPCODE " + AppCode, forHTTPHeaderField: "Authorization")
         let session = URLSession.shared
         let task = session.dataTask(with: request, completionHandler: { (data, _, _) -> Void in
             
             do {
-                let result = try JSONSerialization.jsonObject(with: data!, options:.mutableLeaves)
-                print(result)
+                let dictData = try JSONSerialization.jsonObject(with: data!, options:.mutableLeaves)
+                
+                let dict = NSDictionary(data: dictData, encoding: )
+//                params["list"] = dict
+//                let result =
+//                print(result)
             } catch {   // 如果反序列化失败，能够捕获到 json 失败的准确原因，而不会崩溃
                 print(error)
             }
