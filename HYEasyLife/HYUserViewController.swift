@@ -36,7 +36,7 @@ class HYUserViewController: UIViewController {
     
     var userInfoArray : [(imageName: String , titleName: String, TargetController: String)] = {
         
-        let userInfoArray = [("myVip_icon","我的特权","HYMyVipController"),("myWallets_icon","我的钱包","HYMyWalletsController"),("myActivity_icon","我的活动","HYMyActivityController"),("myQuestion_icon","我的提问","HYMyQuestionController"),("myAnswer_icon","我的答案","HYMyAnswerController")]
+        let userInfoArray = [("myVip_icon","我的特权","HYMyVipController"),("myWallets_icon","我的钱包","HYMyWalletsController"),("myActivity_icon","我的活动","HYMyActivityController"),("myQuestion_icon","我的提问","HYMyQuestionController"),("myAnswer_icon","我的回答","HYMyAnswerController")]
         
         return userInfoArray
     }()
