@@ -13,9 +13,7 @@ class HYMyVipController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        
         let constant = Float(arc4random() % 255) / 255.0
-        
         self.view.backgroundColor = UIColor.init(colorLiteralRed: constant, green: constant, blue: constant, alpha: 1)
     }
 }

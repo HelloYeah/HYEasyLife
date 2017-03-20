@@ -12,6 +12,7 @@
 		B47A34F31E7FB9D70071935E /* HYMyQuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47A34F21E7FB9D70071935E /* HYMyQuestionController.swift */; };
 		B47A34F51E7FB9E30071935E /* HYMyAnswerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47A34F41E7FB9E30071935E /* HYMyAnswerController.swift */; };
 		B47A34F71E7FB9EE0071935E /* HYMyVipController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47A34F61E7FB9EE0071935E /* HYMyVipController.swift */; };
+		B47A34FA1E7FD9FD0071935E /* HYDiscoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47A34F91E7FD9FD0071935E /* HYDiscoverController.swift */; };
 		B48DC17A1E7932FC00DD81F6 /* HYHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48DC1791E7932FC00DD81F6 /* HYHomeTableViewCell.swift */; };
 		B48DC17C1E79439900DD81F6 /* HYNewDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48DC17B1E79439900DD81F6 /* HYNewDetailViewController.swift */; };
 		B498F5A21E77E62C003EBD9A /* HYNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B498F5A11E77E62C003EBD9A /* HYNewsModel.swift */; };
@@ -50,6 +51,7 @@
 		B47A34F21E7FB9D70071935E /* HYMyQuestionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYMyQuestionController.swift; sourceTree = "<group>"; };
 		B47A34F41E7FB9E30071935E /* HYMyAnswerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYMyAnswerController.swift; sourceTree = "<group>"; };
 		B47A34F61E7FB9EE0071935E /* HYMyVipController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYMyVipController.swift; sourceTree = "<group>"; };
+		B47A34F91E7FD9FD0071935E /* HYDiscoverController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYDiscoverController.swift; sourceTree = "<group>"; };
 		B48DC1791E7932FC00DD81F6 /* HYHomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYHomeTableViewCell.swift; sourceTree = "<group>"; };
 		B48DC17B1E79439900DD81F6 /* HYNewDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYNewDetailViewController.swift; sourceTree = "<group>"; };
 		B498F5A11E77E62C003EBD9A /* HYNewsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYNewsModel.swift; sourceTree = "<group>"; };
@@ -96,6 +98,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B47A34F81E7FD9DA0071935E /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				B47A34F91E7FD9FD0071935E /* HYDiscoverController.swift */,
+			);
+			name = Discover;
+			sourceTree = "<group>";
+		};
 		B498F5A01E77BEDC003EBD9A /* Thirdparty */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +136,7 @@
 		B4A6B2221E727279008E6965 /* HYEasyLife */ = {
 			isa = PBXGroup;
 			children = (
+				B47A34F81E7FD9DA0071935E /* Discover */,
 				B498F5A01E77BEDC003EBD9A /* Thirdparty */,
 				B4A6B25D1E729076008E6965 /* Config */,
 				B4A6B25A1E727835008E6965 /* User */,
@@ -353,6 +364,7 @@
 				B48DC17C1E79439900DD81F6 /* HYNewDetailViewController.swift in Sources */,
 				B47A34F51E7FB9E30071935E /* HYMyAnswerController.swift in Sources */,
 				B4A6B2591E7275A6008E6965 /* HYHomeViewController.swift in Sources */,
+				B47A34FA1E7FD9FD0071935E /* HYDiscoverController.swift in Sources */,
 				B4A6B25F1E7290DC008E6965 /* HYServerApi.swift in Sources */,
 				B4A6B2241E727279008E6965 /* AppDelegate.swift in Sources */,
 				B47A34EF1E7FB9BD0071935E /* HYMyWalletsController.swift in Sources */,

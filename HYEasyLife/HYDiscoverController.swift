@@ -1,6 +1,5 @@
-
 //
-//  HYMyActivityController.swift
+//  HYDiscoverController.swift
 //  HYEasyLife
 //
 //  Created by Sekorm on 2017/3/20.
@@ -9,7 +8,7 @@
 
 import UIKit
 
-class HYMyActivityController: UIViewController {
+class HYDiscoverController: UIViewController {
     
     override func viewDidLoad() {
         

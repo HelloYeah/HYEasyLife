@@ -14,10 +14,9 @@ class HYTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let homeVc = HYHomeViewController()
-        self.addOneChildVC(vc: homeVc, imageName: "TabBarHome", title: "首页")
-        let userVc = HYUserViewController()
-        self.addOneChildVC(vc: userVc, imageName: "TabBarUser", title: "用户")
+        self.addOneChildVC(vc: HYHomeViewController(), imageName: "TabBarHome", title: "首页")
+        self.addOneChildVC(vc: HYDiscoverController(), imageName: "TabBarBrand", title: "发现")
+        self.addOneChildVC(vc: HYUserViewController(), imageName: "TabBarUser", title: "用户")
         self.tabBar.barTintColor = UIColor.white
     }
     
