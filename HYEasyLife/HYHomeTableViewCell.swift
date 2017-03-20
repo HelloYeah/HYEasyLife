@@ -16,6 +16,7 @@ class HYHomeTableViewCell: UITableViewCell {
         didSet{
             
             self.tileLabel.text = model?.title
+            self.picView.image = nil
             let size = self.tileLabel.sizeThatFits(CGSize(width:UIScreen.main.bounds.width, height:100))
             
             self.tileLabel.frame.size = size

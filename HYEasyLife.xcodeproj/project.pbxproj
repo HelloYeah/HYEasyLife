@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B47A34EF1E7FB9BD0071935E /* HYMyWalletsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47A34EE1E7FB9BD0071935E /* HYMyWalletsController.swift */; };
+		B47A34F11E7FB9CC0071935E /* HYMyActivityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47A34F01E7FB9CC0071935E /* HYMyActivityController.swift */; };
+		B47A34F31E7FB9D70071935E /* HYMyQuestionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47A34F21E7FB9D70071935E /* HYMyQuestionController.swift */; };
+		B47A34F51E7FB9E30071935E /* HYMyAnswerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47A34F41E7FB9E30071935E /* HYMyAnswerController.swift */; };
+		B47A34F71E7FB9EE0071935E /* HYMyVipController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47A34F61E7FB9EE0071935E /* HYMyVipController.swift */; };
 		B48DC17A1E7932FC00DD81F6 /* HYHomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48DC1791E7932FC00DD81F6 /* HYHomeTableViewCell.swift */; };
 		B48DC17C1E79439900DD81F6 /* HYNewDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48DC17B1E79439900DD81F6 /* HYNewDetailViewController.swift */; };
 		B498F5A21E77E62C003EBD9A /* HYNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B498F5A11E77E62C003EBD9A /* HYNewsModel.swift */; };
@@ -40,6 +45,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B47A34EE1E7FB9BD0071935E /* HYMyWalletsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYMyWalletsController.swift; sourceTree = "<group>"; };
+		B47A34F01E7FB9CC0071935E /* HYMyActivityController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYMyActivityController.swift; sourceTree = "<group>"; };
+		B47A34F21E7FB9D70071935E /* HYMyQuestionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYMyQuestionController.swift; sourceTree = "<group>"; };
+		B47A34F41E7FB9E30071935E /* HYMyAnswerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYMyAnswerController.swift; sourceTree = "<group>"; };
+		B47A34F61E7FB9EE0071935E /* HYMyVipController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYMyVipController.swift; sourceTree = "<group>"; };
 		B48DC1791E7932FC00DD81F6 /* HYHomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYHomeTableViewCell.swift; sourceTree = "<group>"; };
 		B48DC17B1E79439900DD81F6 /* HYNewDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYNewDetailViewController.swift; sourceTree = "<group>"; };
 		B498F5A11E77E62C003EBD9A /* HYNewsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYNewsModel.swift; sourceTree = "<group>"; };
@@ -179,6 +189,11 @@
 			isa = PBXGroup;
 			children = (
 				B4A6B25B1E72789B008E6965 /* HYUserViewController.swift */,
+				B47A34F61E7FB9EE0071935E /* HYMyVipController.swift */,
+				B47A34EE1E7FB9BD0071935E /* HYMyWalletsController.swift */,
+				B47A34F01E7FB9CC0071935E /* HYMyActivityController.swift */,
+				B47A34F21E7FB9D70071935E /* HYMyQuestionController.swift */,
+				B47A34F41E7FB9E30071935E /* HYMyAnswerController.swift */,
 			);
 			name = User;
 			sourceTree = "<group>";
@@ -330,13 +345,18 @@
 			files = (
 				B4A6B25C1E72789B008E6965 /* HYUserViewController.swift in Sources */,
 				B48DC17A1E7932FC00DD81F6 /* HYHomeTableViewCell.swift in Sources */,
+				B47A34F31E7FB9D70071935E /* HYMyQuestionController.swift in Sources */,
 				B498F5A21E77E62C003EBD9A /* HYNewsModel.swift in Sources */,
+				B47A34F71E7FB9EE0071935E /* HYMyVipController.swift in Sources */,
 				B4A6B2521E727325008E6965 /* HYTabBarController.swift in Sources */,
 				B4A6B2561E727567008E6965 /* HYNavigationController.swift in Sources */,
 				B48DC17C1E79439900DD81F6 /* HYNewDetailViewController.swift in Sources */,
+				B47A34F51E7FB9E30071935E /* HYMyAnswerController.swift in Sources */,
 				B4A6B2591E7275A6008E6965 /* HYHomeViewController.swift in Sources */,
 				B4A6B25F1E7290DC008E6965 /* HYServerApi.swift in Sources */,
 				B4A6B2241E727279008E6965 /* AppDelegate.swift in Sources */,
+				B47A34EF1E7FB9BD0071935E /* HYMyWalletsController.swift in Sources */,
+				B47A34F11E7FB9CC0071935E /* HYMyActivityController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
