@@ -54,12 +54,6 @@ class HYUserViewController: UIViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCellReusableID")
         
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        
-        super.viewDidAppear(animated)
-        self.navigationController?.navigationBar.alpha = 0
-    }
 }
 
 extension HYUserViewController: UITableViewDataSource,UITableViewDelegate {
@@ -100,12 +94,5 @@ extension HYUserViewController: UITableViewDataSource,UITableViewDelegate {
         let childController = clsType.init()
         childController.title = yuanzu.titleName
         self.navigationController?.pushViewController(childController, animated: true)
-    }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
-        let offsetY = scrollView.contentOffset.y
-        let alphe = offsetY / self.headerView.bounds.height
-        self.navigationController?.navigationBar.alpha = alphe
     }
 }
