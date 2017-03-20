@@ -4,14 +4,33 @@
 //
 //  Created by Sekorm on 2017/3/10.
 //  Copyright © 2017年 YL. All rights reserved.
-//
+// 
 
 import UIKit
 
 class HYUserViewController: UIViewController {
 
-    
     let tableView = UITableView()
+    var headerView : UIView = {
+    
+        let headerView = UIView.init(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 240.0))
+        headerView.backgroundColor = UIColor.init(patternImage: UIImage.init(named: "1")!)
+        
+        let userBorderView = UIView.init(frame: CGRect(x: 0, y: 0, width: 90.0, height: 90.0))
+        userBorderView.center = CGPoint(x: headerView.bounds.width * 0.5 , y: headerView.bounds.height * 0.5 + 32);
+        userBorderView.backgroundColor = UIColor.white
+        headerView.addSubview(userBorderView)
+        userBorderView.layer.cornerRadius = 45
+        userBorderView.layer.masksToBounds = true
+        
+        let userIcon = UIImageView.init(frame: CGRect(x: 0, y: 0, width: 80, height: 80))
+        userIcon.image = UIImage.init(named: "head_portrait")
+        userIcon.layer.cornerRadius = 40
+        userIcon.layer.masksToBounds = true
+        userIcon.center = CGPoint(x: userBorderView.bounds.width * 0.5 , y: userBorderView.bounds.height * 0.5);
+        userBorderView.addSubview(userIcon)
+        return headerView
+    }()
     
     var userInfoArray : [(imageName: String , titleName: String, TargetController: String)] = {
         
@@ -22,11 +41,14 @@ class HYUserViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.red
+        
+        self.automaticallyAdjustsScrollViewInsets = false
         self.view.addSubview(tableView)
         tableView.frame = self.view.bounds
+//        tableView.backgroundColor = UIColor.orange
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.tableHeaderView = headerView
         tableView.tableFooterView = UIView()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCellReusableID")
     }
