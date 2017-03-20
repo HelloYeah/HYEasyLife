@@ -14,7 +14,9 @@ class HYUserViewController: UIViewController {
     var headerView : UIView = {
     
         let headerView = UIView.init(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 240.0))
-        headerView.backgroundColor = UIColor.init(patternImage: UIImage.init(named: "1")!)
+        let backgroudImageView = UIImageView.init(frame: headerView.bounds)
+        headerView.addSubview(backgroudImageView)
+        backgroudImageView.image = UIImage.init(named: "1")
         
         let userBorderView = UIView.init(frame: CGRect(x: 0, y: 0, width: 90.0, height: 90.0))
         userBorderView.center = CGPoint(x: headerView.bounds.width * 0.5 , y: headerView.bounds.height * 0.5 + 32);
@@ -45,14 +47,19 @@ class HYUserViewController: UIViewController {
         self.automaticallyAdjustsScrollViewInsets = false
         self.view.addSubview(tableView)
         tableView.frame = self.view.bounds
-//        tableView.backgroundColor = UIColor.orange
         tableView.dataSource = self
         tableView.delegate = self
         tableView.tableHeaderView = headerView
         tableView.tableFooterView = UIView()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCellReusableID")
+        
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+        super.viewDidAppear(animated)
+        self.navigationController?.navigationBar.alpha = 0
+    }
 }
 
 extension HYUserViewController: UITableViewDataSource,UITableViewDelegate {
@@ -93,5 +100,12 @@ extension HYUserViewController: UITableViewDataSource,UITableViewDelegate {
         let childController = clsType.init()
         childController.title = yuanzu.titleName
         self.navigationController?.pushViewController(childController, animated: true)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        let offsetY = scrollView.contentOffset.y
+        let alphe = offsetY / self.headerView.bounds.height
+        self.navigationController?.navigationBar.alpha = alphe
     }
 }
